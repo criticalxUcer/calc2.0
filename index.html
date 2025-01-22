@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .calculator {
+            width: 300px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .display {
+            background: #cfcfcf;
+            color: rgb(0, 0, 0);
+            text-align: right;
+            padding: 20px;
+            font-size: 2rem;
+            height: 80px;
+            box-sizing: border-box;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .button {
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            background: #f9f9f9;
+        }
+        .button.operator {
+            background: #f0a500;
+            color: white;
+        }
+        .button.zero {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <div class="button" data-value="7">7</div>
+            <div class="button" data-value="8">8</div>
+            <div class="button" data-value="9">9</div>
+            <div class="button operator" data-value="/">÷</div>
+            <div class="button" data-value="4">4</div>
+            <div class="button" data-value="5">5</div>
+            <div class="button" data-value="6">6</div>
+            <div class="button operator" data-value="*">×</div>
+            <div class="button" data-value="1">1</div>
+            <div class="button" data-value="2">2</div>
+            <div class="button" data-value="3">3</div>
+            <div class="button operator" data-value="-">−</div>
+            <div class="button zero" data-value="0">0</div>
+            <div class="button" data-value=".">.</div>
+            <div class="button operator" data-value="+">+</div>
+            <div class="button operator" data-value="=">=</div>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
